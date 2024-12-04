@@ -24,7 +24,7 @@ public class SecurityConfig {
                     .requestMatchers("/").hasRole("USER")
                     .anyRequest().authenticated())
             .formLogin(withDefaults())
-            .rememberMe(withDefaults())
+            /* .rememberMe(withDefaults())*/
             .logout(logout -> logout.logoutUrl("/signout").permitAll());
         return http.build();
     }
